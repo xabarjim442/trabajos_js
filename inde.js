@@ -158,6 +158,8 @@ function validacionCampos(nombre,apellido1,apellido2,telefono,fecha,email,edad)
     }
     return valido;
 }
+/*! Lista contenedora de los alumnos creados */
+const lista_alumnos= [];
 
 /*! crear el alumno y mostrarlo por pantalla */
 function crearAlumno()
@@ -183,15 +185,15 @@ function crearAlumno()
             alumno.edad = edad;
 
 
-            const lista_alumnos= [];
+            
             lista_alumnos.push(alumno);
 
-            for (i=0; i < lista_alumnos.length; i++)
+            for (let i=0; i < lista_alumnos.length; i++)
             {
                 const lista = document.getElementById('lista');
 
                 const li = document.createElement("li");
-                alum= lista_alumnos[i];
+                const alum= lista_alumnos[i];
                 li.textContent = `${alum.nombre} ${alum.apellido}`;
                 
                 lista.appendChild(li);
