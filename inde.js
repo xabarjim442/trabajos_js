@@ -66,6 +66,7 @@ class Alumno
 
 
 
+/*!validaciones de los campos (Color)*/
 
 function compruebaNombre()
 {
@@ -147,6 +148,7 @@ function compruebaEdad()
     }
 }
 
+/*!validaciones de los campos */
 function validacionCampos(nombre,apellido1,apellido2,telefono,fecha,email,edad)
 {
     let valido=true;
@@ -157,7 +159,7 @@ function validacionCampos(nombre,apellido1,apellido2,telefono,fecha,email,edad)
     return valido;
 }
 
-
+/*! crear el alumno y mostrarlo por pantalla */
 function crearAlumno()
 {   
     let nombre = String(frmAlumno.nombre.value.trim());
