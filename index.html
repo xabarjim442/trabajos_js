@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <form name="frmAlumno" class="form" id="frmAlumno">
+            <h2>Formulario de Alumno</h2>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Introduce el nombre" required onblur="compruebaNombre()">
+
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Introduce el apellido" required onblur="compruebaApellido()">
+
+            <label for="apellido2">Segundo Apellido</label>
+            <input type="text" name="apellido2" id="apellido2" placeholder="Introduce el segundo apellido" onblur="compruebaApellido2()">
+
+            <label for="telefono">Teléfono</label>
+            <input type="number" name="telefono" id="telefono" placeholder="Introduce el teléfono" required onblur="compruebaTelefono()">
+
+            <label for="fecha">Fecha de Nacimiento</label>
+            <input type="date" name="fecha" id="fecha" required>
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Introduce el email" required onblur="compruebaEmail()">
+
+            <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad" placeholder="Introduce la edad" onblur="compruebaEdad()">
+
+            <button type="button" class="btn" onclick="crearAlumno();">Guardar</button>
+            <button type="button" class="btn" onclick="modificarAlumno();">Modificar</button>
+        </form>
+    </div>
+
+    <div class="lista_alumnos">
+        <ul id="lista"></ul>
+    </div>
+    <script src="./inde.js"></script>
+</body>
+</html>
