@@ -193,9 +193,19 @@ function crearAlumno()
                 const lista = document.getElementById('lista');
 
                 const li = document.createElement("li");
+                const boton = document.createElement("button");
                 const alum= lista_alumnos[i];
+                
+                boton.textContent ="editar";
+                boton.className = "btn";
+                boton.onclick= function()
+                {
+                    modificarAlumno(alum);
+                };
+
                 li.textContent = `${alum.nombre} ${alum.apellido}`;
                 
+                li.appendChild(boton);
                 lista.appendChild(li);
             }
 
@@ -211,7 +221,15 @@ function crearAlumno()
             }
 }
 
-function modificarAlumno()
+/*! Work in progress */
+function modificarAlumno(alumno)
 {
-    
+    const boton = document.createElement("button");
+    for ( alum of lista_alumnos)
+    {
+        if (alum == alumno)
+        {
+            alert("hola");
+        }
+    }
 }
